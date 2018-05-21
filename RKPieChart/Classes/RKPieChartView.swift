@@ -75,7 +75,7 @@ public class RKPieChartView: UIView {
         }
     }
     
-    public var items: [RKPieChartItem] = [RKPieChartItem]()
+    private var items: [RKPieChartItem] = [RKPieChartItem]()
     private var titlesView: UIStackView?
     private var totalRatio: CGFloat = 0
     private let itemHeight: CGFloat = 10.0
@@ -123,6 +123,11 @@ public class RKPieChartView: UIView {
         self.centerTitle = centerTitle
         calculateAngles()
         backgroundColor = .clear
+    }
+    
+    public func updateItems(_items: [RKPieChartItem]) {
+        items = _items
+        calculateAngles()
     }
     
     public override func layoutSubviews() {
