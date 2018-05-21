@@ -126,7 +126,7 @@ public class RKPieChartView: UIView {
     }
     
     public func updateItems(_items: [RKPieChartItem]) {
-        items = _items
+        self.items = _items
         calculateAngles()
     }
     
